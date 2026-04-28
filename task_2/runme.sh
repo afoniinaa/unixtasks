@@ -47,7 +47,7 @@ MAX=0
 LINES=0
 
 if [ -f "$STATS_FILE" ]; then
-    LINES=$(grep -c '\[PID ' "$STATS_FILE" 2>/dev/null || echo 0)
+    LINES=$(grep '^PID ' stats.txt | wc -l | tr -d ' ')
 
     ZERO_COUNT=$(grep '^PID ' "$STATS_FILE" \
                  | awk -F': ' '$2 == 0 {count++} END {print count+0}')
