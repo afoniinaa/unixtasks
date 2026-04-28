@@ -1,19 +1,15 @@
 # Task 1
-
-## Requirements
-Ubuntu/WSL with `make`, `bash`, and C compiler (`cc`/`gcc`)
-
-## Build
 ```bash
 make
-```
-
-## Run
-```bash
 bash runme.sh
+cat result.txt
 ```
-
-## Check
+# Task 2
 ```bash
+chmod +x runme.sh
+make -f Makefile clean
+make -f Makefile
+bash runme.sh
+cat stats.txt
 cat result.txt
 ```
